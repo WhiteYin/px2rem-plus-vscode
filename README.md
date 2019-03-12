@@ -1,41 +1,30 @@
-# px2rem+ extension
-
+# px2rem  extension
+px转换rem，自动补全分号和注释。  
 Convert px to rem extension for Visual Studio Code.
+
+## First of all
+这个插件脱胎于[px2rem +](https://github.com/hex-ci/px2rem-plus-vscode)，但是由于加了注释以后需要手动移动光标加上分号不适合我的审美，于是将分号也自动补全了。
+
+This is a extension inspired from [px2rem +](https://github.com/hex-ci/px2rem-plus-vscode) whitch provides the auto comments features.But I dislike that it do not auto complete semicolon. So, I fork it's source code and add this feature.
 
 ## Autocomplete
 
-![](https://raw.githubusercontent.com/hex-ci/px2rem-plus-vscode/master/images/autocomplete.png)
-
-## Convert in buffer
-
-Convert all text or selected text. Using the shortcut <kbd>ctrl-alt-r</kbd>.
+![](https://raw.githubusercontent.com/WhiteYin/px2rem-with-semicolon/master/images/autocomplete.png)
 
 ## Settings
 
-Sets the base pixel size of the current file. Using the shortcut <kbd>ctrl-alt-p</kbd>.
+Sets the base pixel size of the current file. 
 
-![](https://raw.githubusercontent.com/hex-ci/px2rem-plus-vscode/master/images/settings.png)
+![](https://raw.githubusercontent.com/WhiteYin/px2rem-with-semicolon/master/images/settings.png)
 
 ## Comments
 
-Support for adding comments, e.g. `/* 100/75 */`
+Support for adding comments, e.g. `/* 100/234 */`
 
 ## Preserve leading zero
 
 Keep the leading zero for converted values < 1. E.g. 0.5rem (preserved) vs .5rem (not preserved)
 
-## Using vw and vh
-
-Support for using vw and vh instead of rem, using the base pixel size, but only in autocomplete.
-
-To use this feature, set `base pixel size` config to proper value, eg: `7.5`, and enable `useVwAndVh`, boom, magic happens。
-
-![](https://raw.githubusercontent.com/hex-ci/px2rem-plus-vscode/master/images/vw.gif)
-
-## Two-way Conversion
-
-Support to convert rem to px, using the base pixel size, but only in autocomplete.
-
 ## Demo
 
-![](https://raw.githubusercontent.com/hex-ci/px2rem-plus-vscode/master/images/example.gif)
+![](https://raw.githubusercontent.com/WhiteYin/px2rem-with-semicolon/master/images/example.gif)

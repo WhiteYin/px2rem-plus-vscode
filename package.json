@@ -1,10 +1,10 @@
 {
-  "name": "px2rem-plus",
-  "displayName": "px2rem+",
-  "description": "Convert px to rem extension for Visual Studio Code.",
-  "version": "0.3.4",
-  "publisher": "hex-ci",
-  "repository": "https://github.com/hex-ci/px2rem-plus-vscode",
+  "name": "px2rem-semicolon",
+  "displayName": "px2rem semicolon",
+  "description": "px转换rem，自动补全分号和注释。",
+  "version": "0.0.1",
+  "publisher": "whiteyin",
+  "repository": "https://github.com/WhiteYin/px2rem-with-semicolon",
   "license": "MIT",
   "engines": {
     "vscode": "^1.25.0"
@@ -27,72 +27,34 @@
   "contributes": {
     "commands": [
       {
-        "command": "px2rem-plus.convert",
-        "title": "%command.convert.title%",
-        "category": "px2rem+"
-      },
-      {
-        "command": "px2rem-plus.settings",
+        "command": "px2rem-semicolon.settings",
         "title": "%command.settings.title%",
-        "category": "px2rem+"
-      }
-    ],
-    "menus": {
-      "editor/context": [
-        {
-          "command": "px2rem-plus.convert",
-          "group": "px2rem+@1"
-        },
-        {
-          "command": "px2rem-plus.settings",
-          "group": "px2rem+@2"
-        }
-      ]
-    },
-    "keybindings": [
-      {
-        "command": "px2rem-plus.convert",
-        "key": "ctrl+alt+r",
-        "when": "editorTextFocus"
-      },
-      {
-        "command": "px2rem-plus.settings",
-        "key": "ctrl+alt+p"
+        "category": "px2rem semicolon"
       }
     ],
     "configuration": {
       "type": "object",
       "title": "%configuration.title%",
       "properties": {
-        "px2rem-plus.base": {
+        "px2rem-semicolon.base": {
           "type": "number",
-          "default": 75,
+          "default": 234,
           "description": "%configuration.base.description%"
         },
-        "px2rem-plus.precision": {
+        "px2rem-semicolon.precision": {
           "type": "number",
           "default": 6,
           "description": "%configuration.precision.description%"
         },
-        "px2rem-plus.comments": {
+        "px2rem-semicolon.comments": {
           "type": "boolean",
           "default": false,
           "description": "%configuration.comments.description%"
         },
-        "px2rem-plus.leadingZero": {
+        "px2rem-semicolon.leadingZero": {
           "type": "boolean",
           "default": false,
           "description": "%configuration.leadingZero.description%"
-        },
-        "px2rem-plus.twoWayConversion": {
-          "type": "boolean",
-          "default": false,
-          "description": "%configuration.twoWayConversion.description%"
-        },
-        "px2rem-plus.useVwAndVh": {
-          "type": "boolean",
-          "default": false,
-          "description": "%configuration.useVwAndVh.description%"
         }
       }
     }

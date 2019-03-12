@@ -26,8 +26,8 @@ export default {
         remStr = remStr.replace(/^([-+])?0+/, '$1');
       }
     }
-
-    return `${remStr}${unitText}` + (options.comments ? ` /* ${num}/${base} */` : '');
+    // 补全分号
+    return `${remStr}${unitText};` + (options.comments ? ` /* ${num}/${base} */` : '');
   },
 
   getPx(str) {
@@ -44,7 +44,7 @@ export default {
       }
     }
 
-    return `${pxStr}px` + (options.comments ? ` /* ${num}*${base} */` : '');
+    return `${pxStr}px;` + (options.comments ? `; /* ${num}*${base} */` : '');
   },
 
   convert(text) {
@@ -64,7 +64,7 @@ export default {
   },
 
   get options() {
-    return workspace.getConfiguration('px2rem-plus');
+    return workspace.getConfiguration('px2rem-semicolon');
   },
 
   get base() {
@@ -113,15 +113,19 @@ export default {
   },
 
   get isTwoWay() {
-    const options = this.options;
-
-    return options.twoWayConversion;
+    // const options = this.options;
+    // return options.twoWayConversion;
+    
+    // 不启用两种转换方式
+    return false;
   },
 
   get isUseVwVh() {
-    const options = this.options;
+    // const options = this.options;
 
-    return options.useVwAndVh;
+    // return options.useVwAndVh;
+    // 不支持vw/vh转换
+    return false;
   },
 
   initLocalization(rootPath) {
